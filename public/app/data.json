@@ -1,0 +1,74 @@
+[
+{
+"mid":"1000",
+"mname":"Test flow-1",
+"toq":0,
+"taq":40,
+"tsq":"20-12-2016",
+"uom":"user1",
+"flowId":"123-456",
+"status":"Not started",
+"style" : "slb-progress-indicator positive"
+},
+{
+"mid":"1001",
+"mname":"Test flow-2",
+"toq":40,
+"taq":100,
+"tsq":"20-12-2016",
+"uom":"user2",
+"flowId":"456-789",
+"status":"Error",
+"style" : "slb-progress-indicator warning"
+},{
+"mid":"1002",
+"mname":"Test flow-3",
+"toq":90,
+"taq":100,
+"tsq":"20-12-2016",
+"uom":"user3",
+"flowId":"135-425",
+"status":"In progress",
+"style" : "slb-progress-indicator positive"
+},{
+"mid":"1003",
+"mname":"Test flow-4",
+"toq":50,
+"taq":100,
+"tsq":"20-12-2016",
+"uom":"user4",
+"flowId":"138-859",
+"status":"In progress",
+"style" : "slb-progress-indicator positive"
+},{
+"mid":"1004",
+"mname":"Test flow-5",
+"toq":0,
+"taq":100,
+"tsq":"20-12-2016",
+"uom":"user5",
+"flowId":"658-985",
+"status":"Not started",
+"style" : "slb-progress-indicator positive"
+},{
+"mid":"1005",
+"mname":"Test flow-6",
+"toq":20,
+"taq":100,
+"tsq":"20-12-2016",
+"uom":"user6",
+"flowId":"856-985",
+"status":"Error",
+"style" : "slb-progress-indicator warning"
+},{
+"mid":"1006",
+"mname":"Test flow-7",
+"toq":70,
+"taq":100,
+"tsq":"20-12-2016",
+"uom":"user7",
+"flowId":"321-654",
+"status":"Error",
+"style" : "slb-progress-indicator warning"
+}
+]

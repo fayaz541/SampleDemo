@@ -1,0 +1,128 @@
+<DIV class="info" id="jobsTable">
+<DIV class="slb-table">
+<DIV class="slb-table-heading">
+<H2>My Job List</H2><tr><th colspan="1.5"><input placeholder="Filter by Flow Name" class="form-control" [(ngModel)]="searchText"/>
+</th>
+                </tr>                  </DIV>
+
+ <div id="menu2" class="tab-pane fade in active slb-table-container">
+    <br/><br/>
+    <div class="slb-table-container">
+            <!-- <h3>My Job List</h3> -->
+         <table class="table table-striped" [mfData]="data" #mf="mfDataTable"
+                   [mfRowsOnPage]="rowsOnPage" [(mfSortBy)]="sortBy" [(mfSortOrder)]="sortOrder">
+            
+                <thead>
+                <tr>
+                   <th style="width: 5%">
+                        <mfDefaultSorter by="mid">Job ID</mfDefaultSorter>
+                    </th>
+                    <th style="width: 7%">
+                        <mfDefaultSorter by="flowId">Flow ID</mfDefaultSorter>
+                    </th>
+                    <th style="width: 10%">
+                        <mfDefaultSorter by="mname">Flow Name</mfDefaultSorter>
+                    </th>
+                    <th style="width: 10%">
+                        <mfDefaultSorter by="toq">Progress</mfDefaultSorter>
+                    </th>
+                    <th style="width: 10%">
+                        <mfDefaultSorter by="status">Status</mfDefaultSorter>
+                    </th>
+                    <th style="width: 11%">
+                        <mfDefaultSorter by="tsq">Date Submitted</mfDefaultSorter>
+                    </th>
+                    <th style="width: 10%">
+                        <mfDefaultSorter by="uom">Submitted By</mfDefaultSorter>
+                    </th>
+                    <th style="width: 10%">
+                        <mfDefaultSorter by="tsq">Last Updated</mfDefaultSorter>
+                    </th>
+                    <th style="width: 10%">
+                        Actions
+                    </th>
+               </tr>
+			   
+                
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of (mf.data | search : searchText)">
+                    <td style="padding-left: 10px;">{{item.mid}}</td>
+                    <td >{{item.flowId}}</td>
+                    <td >{{item.mname}}</td>
+                    <td class="item"><DIV class="{{item.style}}" ><SPAN 
+      class="value">{{item.toq}}%</SPAN>                 
+      <DIV class="wrap">
+      <DIV class="bar" [style.width]="(item.toq/100)*100 + '%'"></DIV></DIV>
+      <DIV class="meta"></DIV></DIV></td>
+                    <td >{{item.status}}</td>
+                    <td >{{item.tsq}}</td>
+                    <td> {{item.uom}}</td>
+                    <td >{{item.tsq}}</td>
+                    <td>
+                     <button (click)="remove(item)" class="btn btn-danger">x</button>
+                     <button (click)="view(item)" class="btn btn-view">View</button>
+                     </td>
+                    </tr>
+    
+                </tbody>
+
+            </table>
+            <!--<table class="table table-striped" id="exmaple">
+            <thead>
+                <tr>
+<th style="color: #337ab7" class="sort-false">Job ID<span class="caret"></span></th>
+<th style="color: #337ab7">Flow ID<span class="caret"></span></th>
+<th style="color: #337ab7">Flow Name<span class="caret"></span></th>
+<th style="color: #337ab7">Progress<span class="caret"></span></th>
+<th style="color: #337ab7">Status<span class="caret"></span></th>
+<th style="color: #337ab7">Date Submitted<span class="caret"></span></th>
+<th style="color: #337ab7">Submitted By<span class="caret"></span></th>
+<th style="color: #337ab7">Last Updated<span class="caret"></span></th>
+<th style="color: #337ab7">Actions<span class="caret"></span></th>
+                </tr>
+                </thead>
+                <tbody *ngFor='let item of (data | search : searchText)' id="display">
+                    <tr>
+                    <td class="item">{{item.mid}}</td>
+                    <td class="item">{{item.toq}}</td>
+                    <td class="item">{{item.mname}}</td>
+                    <td><DIV class="{{item.style}}" ><SPAN 
+      class="value">{{item.toq}}%</SPAN>                 
+      <DIV class="wrap">
+      <DIV class="bar" [style.width]="(item.toq/100)*100 + '%'"></DIV></DIV>
+      <DIV class="meta"></DIV></DIV></td>
+                    <td class="item">{{item.status}}</td>
+                    <td class="item">{{item.tsq}}</td>
+                    <td class="item">{{item.uom}}</td>
+                    <td class="item">{{item.tsq}}</td>
+                    <td>
+                     <button (click)="remove(item)" class="btn btn-danger">x</button>
+                     <button (click)="view(item)" class="btn btn-view">View</button>
+                     </td>
+                    </tr>
+    
+                </tbody>
+
+            </table>-->
+          
+           <div>
+              
+            </div>      
+                   <br/> 
+                   <div style="top:670px;right:10px;position:absolute;">
+                         
+               <br/> <br/>
+                     </div>  
+                       <br/> <br/>
+    
+         
+            
+  </div>
+  
+        </div>
+
+ 
+
+
+</DIV></DIV>
